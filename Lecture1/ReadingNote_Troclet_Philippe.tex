@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\def\titre{}
+\def\auteur{}
+\def\courriel{}
+\makeatletter
+
+\title{LOG8415\\Concepts avanc\'{e}s en infonuagique}
+
+\author{
+    Foutse Khomh \\
+    S. Amirhossein Abtahizadeh \\
+    D\'{e}partement G\'{e}nie Informatique et G\'{e}nie Logiciel \\
+    \'{E}cole Polytechnique de Montr\'{e}al, Qu\'{e}bec, Canada \\
+    \texttt{foutse.khomh[at]polymtl.ca} \\
+    \texttt{a.abtahizadeh[at]polymtl.ca}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Identification}
+
+\paragraph{Student's name:} \auteur Troclet Philippe
+
+\paragraph{Date of the reading note:} \today
+
+\paragraph{Author(s):} Brendan Jennings, Rolf Stadler
+
+\paragraph{Title of the article:} \titre Resource Management in Clouds: Survey and Research Challenges
+
+\paragraph{Publication:} Springer Science+Business Media New York 2014
+
+\section{Article}
+
+\paragraph{Keywords:} Cloud Computing, Resource allocation, Resource management, Virtualization, Survey
+
+\paragraph{Concepts and definitions:}
+\begin{description}
+	\item[Cloud Computing] : partage de ressources entre plusieurs applications, lesquelles sont accédées via internet.
+	\item[Public Cloud] : location de ressources à des tiers qui seront facturés en fonction de leur consommation.
+	\item[Private Cloud] : infrastructure privée utilisée et maintenue par une unique organisation.
+	\item[Hybrid Cloud] : fait d'entendre les capacités de son private cloud en utilisant des ressources mises à disposition par un public cloud
+	\item[Gestion des ressources] : allocation de ressources (processeur, stockage, réseau et énergie) à un ensemble d'applications, de façon à remplir les différents 
+		objectifs de performances des applications.
+	\item[Fournisseur du cloud] gère un ensemble de centres de données tant du point de vue logiciel que matériel. Il s'engage auprès de l'utilisateur à garantir une
+		certaine qualité de service.
+	\item[Utilisateur du cloud] utilise les abstractions fournies par le fournisseur pour héberger des applications qui seront uilisées par l'utilisateur final. Il 
+		se doit de respecter ses engagements auprès de ce dernier.
+	\item[Utilisateur final] utilise les applications mises à sa disposition. Il génére donc le traffic et par extension la charge reçue par les applications.
+\end{description}
+Il convient de préciser que le terme \textit{ressources} fait référence à l'utilisation du processeur, mais aussi à l'utilisation du stockage, de la bande passante ou
+encore de l'énergie. Par ailleurs, l'ensemble des mécanismes développés dans la prochaine section ne sont possibles uniquemant grâce aux technologie suivantes: 
+la virtualisation (permet le partage de ressources physiques), la migration de machine virtuelle (permet de déplacer une VM d'un serveur à un autre) et l'ajustement 
+dynamique de la consommation d'énergie (permet de consommer moins en période d'inactivité).
+\paragraph{Summary:}
+La base de l'infonuagique est l'allocation de ressources à différents clients de manière à maximiser l'utilisation du matériel tout en respectant les clauses de 
+performances sur lesquelles clients et fournisseurs se sont entendus. La gestion des ressources est alors un défi majeur auxquel les fournsseurs sont confrontés. En effet
+les centres de données modernes possèdent un très grand nombre de ressources, potentiellement très différentes mais pouvant être liées par des dépendances qu'il faut
+respecter. De plus, la charge liée aux applications hébergées est très variable et difficile à prévoir, donc à anticiper. Afin de mieux cerner le problème, les auteurs 
+divisent la problèmatique en huit sous-domaines de recherche:
+\begin{enumerate}
+	\item\label{global scheduling}  administration globale des ressources vitualisées
+	\item\label{resource demand}estimation de la demande
+	\item\label{resource utilization}estimation de l'utilisation
+	\item\label{resource pricing}maximisation des prix et profits
+	\item\label{local scheduling}administration locale des ressources du cloud
+	\item\label{application scaling}modulation de la capacité des applications
+	\item\label{workload management}gestion de la charge
+	\item\label{cloud management}création de système de gestion pour le cloud
+\end{enumerate}
+Il est intéressant de remarquer que ses sous-domaines sont très liés, afin de maximiser les profits, il est primordial de pouvoir estimer correctement la demande et la
+charge courante. On ne peut prendre de décision sans mesures fiables pour supporter la mise en place d'algorithme, de raisonnement. De plus, la facturation étant basée 
+sur l'utilisation, il est important de pouvoir estimer les ressources consommées.
+
+Le point \ref{global scheduling} réfère à la création ainsi qu'au déplacement des machines virtuelles de l'utilisateur par le fournisseur au cours du temps.
+Ainsi qu'à la gestion des requêtes de création (accepter/refuser) en fonction de l'état courant du système. Le point \ref{resource demand} caractérise la 
+nécessité d'établir des modèles de prédiction de la demande d'ajuster les ressources allouées en prévision d'une future augmentation de la charge.
+
+
+
+\paragraph{Research contributions:}
+
+\section{Analysis}
+
+\paragraph{Quality:} ~\newline
+\begin{tabular}{p{.25\textwidth}p{.25\textwidth}p{.25\textwidth}p{.25\textwidth}}
+\begin{minipage}[t]{.25\textwidth}
+General organization:
+\begin{description}
+\item $\square$ Very good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\square$ Medium;
+\item $\square$ Bad;
+\item $\square$ Very bad.
+\end{description}
+\end{minipage}
+
+&
+
+\begin{minipage}[t]{.25\textwidth}
+Language and style:
+\begin{description}
+\item $\square$ Very good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\square$ Medium;
+\item $\square$ Bad;
+\item $\square$ Very bad.
+\end{description}
+\end{minipage}
+
+&
+
+\begin{minipage}[t]{.25\textwidth}
+Technique:
+\begin{description}
+\item $\square$ Very good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\square$ Medium;
+\item $\square$ Bad;
+\item $\square$ Very bad;
+\item $\square$ N/A.
+\end{description}
+\end{minipage}
+
+&
+
+\begin{minipage}[t]{.25\textwidth}
+Bibliography:
+\begin{description}
+\item $\square$ Very good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\square$ Medium;
+\item $\square$ Bad;
+\item $\square$ Very bad;
+\end{description}
+\end{minipage}
+\end{tabular}
+
+\paragraph{Forces of the message:}
+
+\paragraph{Weaknesses of the message:}
+
+\paragraph{Future directions:}
+
+\paragraph{Other important articles:}
+
+\end{document}
