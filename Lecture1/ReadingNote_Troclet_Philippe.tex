@@ -91,12 +91,18 @@ ailleurs, le point \ref{application scaling} met en lumière l'importance de pou
 de performance soient atteints. De même, il peut être nécessaire de refuser certaines requêtes afin de préserver la performance générale. Enfin, le point 
 \ref{cloud management} se rapporte au besoin de définir des métriques pour caractériser les objectifs de performances à atteindre.
 
-Précisons qu'au moment de la publication de l'article, la gestion des différentes VM se fait via des méthodes centralisées et l'allocation de ressources se fait de 
+Précisons qu'au moment de la publication de l'article, la gestion des différentes (et les mesures de performance) VM se font via des méthodes
+centralisées.De plus, l'allocation de ressources se fait de 
 manière statique. Toutefois, ces problèmes restent des challenges très complexes, en effet l'allocation de ressources et la migration des machines virtuelles se rapportent
-à des problèmes d'optimisation à plusieurs variables. Certaines pouvant être opposées. En effet, il faut prendre en compte l'énergie, le stockage, le cpu, le réseau 
+à des problèmes d'optimisation à plusieurs variables. Certaines pouvant être opposées. Par exemple, répartir les VM sur des centres différents permet d'augmenter la
+fiabilité, mais et moins efficace en terme d'utilisation du réseau.
+En effet, il faut prendre en compte l'énergie, le stockage, le cpu, le réseau 
 ainsi que des conflits liés à des éléments du processeur comme les caches. Par ailleurs, une fois modélisé, il faut que le problème soit solvable en un temps raisonnable.
 A titre d'exemple, le problème d'allocation des ressources est souvent ramené à un problème de sac à dos binaire. Or ce problème est très long à résoudre de façon exacte, 
-des heuristiques efficaces sonot donc néssaires.
+des heuristiques efficaces sont donc néssaires. Toutefois, des solutions décentralisées commencent à émerger ce qui permettrait de s'affranchir des limitations propres
+aux systèmes centralisés. De même, de nombreuses solutions dynamiques sont à l'études afin de mieux tirer parti du matériel et de l'infrastructure.
+On notera également l'apparition de proposition centrées sur les applications elles-mêmes, où il est question de créer des applications qui permettent de tirer profit de 
+la souplesse propre au cloud.
 
 
 
@@ -109,8 +115,8 @@ des heuristiques efficaces sonot donc néssaires.
 \begin{minipage}[t]{.25\textwidth}
 General organization:
 \begin{description}
-\item $\square$ Very good;
-\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ very good;
+\item $\square$ Good;
 \item $\square$ Medium;
 \item $\square$ Bad;
 \item $\square$ Very bad.
@@ -122,8 +128,8 @@ General organization:
 \begin{minipage}[t]{.25\textwidth}
 Language and style:
 \begin{description}
-\item $\square$ Very good;
-\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ very good;
+\item $\square$ Good;
 \item $\square$ Medium;
 \item $\square$ Bad;
 \item $\square$ Very bad.
@@ -149,8 +155,8 @@ Technique:
 \begin{minipage}[t]{.25\textwidth}
 Bibliography:
 \begin{description}
-\item $\square$ Very good;
-\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ Good;
+\item $\mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}$ very good;
+\item $\square$ Good;
 \item $\square$ Medium;
 \item $\square$ Bad;
 \item $\square$ Very bad;
@@ -159,11 +165,24 @@ Bibliography:
 \end{tabular}
 
 \paragraph{Forces of the message:}
+\begin{itemize}
+		\item L'article résume plus de 300 articles, aussi il constitue une base solide pour une personne désirant avoir une vision générale assez précise.
+		\item L'intégralité des notions présentées sont clairement définies, ce qui permet au lecteur de facilement comprendre de quoi il est question
+\end{itemize}
+
 
 \paragraph{Weaknesses of the message:}
+\begin{itemize}
+		\item Le domaine évolue très rapidement et cet article se base sur des références toutes publiées en 2013 ou avant, aussi il est possible que de 
+			nouvelles avancées ait été faites.
+		\item L'article étudié est long, ce qui rend ça lecture difficile, un article plus synthétique aurait sûrement permis aux lecteurs de ne pas se perdre et 
+			passer à côté de notions importantes tout en lui laissant le soin de se référer à des articles plus détaillés pour approfondir certaines notions.
+\end{itemize}
 
 \paragraph{Future directions:}
-
+De part l'ancienneté de l'article, réaliser un nouveau survey semble important afin de connaître l'avancement de la recherche. De plus, avec l'émergence de l'internet des
+objets, il semble fondamental d'étudier la manière dont ils pourront s'intégrer aux technologies actuelles et l'impact de cette intégration. On peut aussi s'interroger sur
+le rôle que l'intelligence artificielle aura à jouer dans les technologies d'infonuagique de demain.
 \paragraph{Other important articles:}
 
 \end{document}
