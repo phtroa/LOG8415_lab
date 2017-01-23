@@ -81,7 +81,22 @@ sur l'utilisation, il est important de pouvoir estimer les ressources consommée
 
 Le point \ref{global scheduling} réfère à la création ainsi qu'au déplacement des machines virtuelles de l'utilisateur par le fournisseur au cours du temps.
 Ainsi qu'à la gestion des requêtes de création (accepter/refuser) en fonction de l'état courant du système. Le point \ref{resource demand} caractérise la 
-nécessité d'établir des modèles de prédiction de la demande d'ajuster les ressources allouées en prévision d'une future augmentation de la charge.
+nécessité d'établir des modèles de prédiction de la demande d'ajuster les ressources allouées en prévision d'une future augmentation de la charge. Le point 
+\ref{resource utilization} souligne le besoin de mesures nécessaires pour surveiller l'activité et répartir la charge. Le point \ref{resource pricing} met en évidence 
+l'importance de la mise au point d'un modèle de facturation permettant d'augmenter l'utilisation de l'infrastructure en encourageant les clients à consommer durant les
+périodes creuses. En particulier, l'utisation de modèles dynamiques semble prometteuse. Le point \ref{local scheduling}, rappelle que plusieurs machines virtuelles 
+tournent sur le même serveur, aussi il est important de bien gérer la répartition des ressources (cpu, réseau, ...) afin de remplir les objectifs de performance. Par
+ailleurs, le point \ref{application scaling} met en lumière l'importance de pouvoir changer les logiciels et leur confgurations de façon dynamique afin de pouvoir s'adapter
+à une augmentation de la demande. De manière plus intuitive, le point \ref{workload management} se rapporte à la gestion de la répartion de requête afin que les objectifs
+de performance soient atteints. De même, il peut être nécessaire de refuser certaines requêtes afin de préserver la performance générale. Enfin, le point 
+\ref{cloud management} se rapporte au besoin de définir des métriques pour caractériser les objectifs de performances à atteindre.
+
+Précisons qu'au moment de la publication de l'article, la gestion des différentes VM se fait via des méthodes centralisées et l'allocation de ressources se fait de 
+manière statique. Toutefois, ces problèmes restent des challenges très complexes, en effet l'allocation de ressources et la migration des machines virtuelles se rapportent
+à des problèmes d'optimisation à plusieurs variables. Certaines pouvant être opposées. En effet, il faut prendre en compte l'énergie, le stockage, le cpu, le réseau 
+ainsi que des conflits liés à des éléments du processeur comme les caches. Par ailleurs, une fois modélisé, il faut que le problème soit solvable en un temps raisonnable.
+A titre d'exemple, le problème d'allocation des ressources est souvent ramené à un problème de sac à dos binaire. Or ce problème est très long à résoudre de façon exacte, 
+des heuristiques efficaces sonot donc néssaires.
 
 
 
