@@ -60,6 +60,10 @@ encore de l'énergie. Par ailleurs, l'ensemble des mécanismes développés dans
 la virtualisation (permet le partage de ressources physiques), la migration de machine virtuelle (permet de déplacer une VM d'un serveur à un autre) et l'ajustement 
 dynamique de la consommation d'énergie (permet de consommer moins en période d'inactivité).
 \paragraph{Summary:}
+
+L'article est issu de la synthèse de plus de 300 autres articles, il permet de définir les notions importantes en termes de
+gestion de ressources et présente l'état de la recherche au regard de ces problématiques.
+
 La base de l'infonuagique est l'allocation de ressources à différents clients de manière à maximiser l'utilisation du matériel tout en respectant les clauses de 
 performances sur lesquelles clients et fournisseurs se sont entendus. La gestion des ressources est alors un défi majeur auxquel les fournsseurs sont confrontés. En effet
 les centres de données modernes possèdent un très grand nombre de ressources, potentiellement très différentes mais pouvant être liées par des dépendances qu'il faut
@@ -95,18 +99,20 @@ Précisons qu'au moment de la publication de l'article, la gestion des différen
 centralisées.De plus, l'allocation de ressources se fait de 
 manière statique. Toutefois, ces problèmes restent des challenges très complexes, en effet l'allocation de ressources et la migration des machines virtuelles se rapportent
 à des problèmes d'optimisation à plusieurs variables. Certaines pouvant être opposées. Par exemple, répartir les VM sur des centres différents permet d'augmenter la
-fiabilité, mais et moins efficace en terme d'utilisation du réseau.
+fiabilité, mais est moins efficace en terme d'utilisation du réseau.
 En effet, il faut prendre en compte l'énergie, le stockage, le cpu, le réseau 
 ainsi que des conflits liés à des éléments du processeur comme les caches. Par ailleurs, une fois modélisé, il faut que le problème soit solvable en un temps raisonnable.
 A titre d'exemple, le problème d'allocation des ressources est souvent ramené à un problème de sac à dos binaire. Or ce problème est très long à résoudre de façon exacte, 
-des heuristiques efficaces sont donc néssaires. Toutefois, des solutions décentralisées commencent à émerger ce qui permettrait de s'affranchir des limitations propres
+des heuristiques efficaces sont donc nécessaires. Toutefois, des solutions décentralisées commencent à émerger ce qui permettrait de s'affranchir des limitations propres
 aux systèmes centralisés. De même, de nombreuses solutions dynamiques sont à l'études afin de mieux tirer parti du matériel et de l'infrastructure.
 On notera également l'apparition de proposition centrées sur les applications elles-mêmes, où il est question de créer des applications qui permettent de tirer profit de 
 la souplesse propre au cloud.
 
 
 
-\paragraph{Research contributions:}
+\paragraph{Research contributions:} Cet article est un \textit{survey}, qui se base sur des recherches impressionantes. Il
+présente donc une cartographie complète du domaine au moment de sa rédaction. Il présente les différentes méthodes recensées ainsi
+que leurs limitations si besoin est. L'article met également en lumière les futures recherches à faire.
 
 \section{Analysis}
 
@@ -167,7 +173,8 @@ Bibliography:
 \paragraph{Forces of the message:}
 \begin{itemize}
 		\item L'article résume plus de 300 articles, aussi il constitue une base solide pour une personne désirant avoir une vision générale assez précise.
-		\item L'intégralité des notions présentées sont clairement définies, ce qui permet au lecteur de facilement comprendre de quoi il est question
+		\item L'intégralité des notions présentées sont clairement définies, ce qui permet au lecteur de facilement
+                    comprendre ce dont il est question
 \end{itemize}
 
 
@@ -176,13 +183,25 @@ Bibliography:
 		\item Le domaine évolue très rapidement et cet article se base sur des références toutes publiées en 2013 ou avant, aussi il est possible que de 
 			nouvelles avancées ait été faites.
 		\item L'article étudié est long, ce qui rend ça lecture difficile, un article plus synthétique aurait sûrement permis aux lecteurs de ne pas se perdre et 
-			passer à côté de notions importantes tout en lui laissant le soin de se référer à des articles plus détaillés pour approfondir certaines notions.
+			passer à côté de notions importantes tout en lui laissant le soin de se référer à des articles plus
+                        détaillés pour approfondir certaines notions. Il aurait ainsi été possible de transformer cet article en
+                        plusieurs articles, un plus général qui aurait renvoyé aux autres pour plus de détails.
 \end{itemize}
 
 \paragraph{Future directions:}
 De part l'ancienneté de l'article, réaliser un nouveau survey semble important afin de connaître l'avancement de la recherche. De plus, avec l'émergence de l'internet des
 objets, il semble fondamental d'étudier la manière dont ils pourront s'intégrer aux technologies actuelles et l'impact de cette intégration. On peut aussi s'interroger sur
-le rôle que l'intelligence artificielle aura à jouer dans les technologies d'infonuagique de demain.
+le rôle que l'intelligence artificielle aura à jouer dans les technologies d'infonuagique de demain. Il semble également
+primordial d'étudier l'intégration des notions de sécurité et vie privée dans le cloud. Par ailleurs, il pourrait être pertinent
+de travailler sur des algorithmes offrant la possibilité de prendre en compte la législation des pays. Certains pays interdisent
+que leurs données ou celles de leurs citoyens soient stockées hors de leurs frontières. 
 \paragraph{Other important articles:}
 
+\begin{itemize}
+    \item Efficient Resource Management for Cloud Computing Environments
+    \item QoS-Aware Autonomic Resource Management in Cloud Computing: A Systematic Review
+    \item A survey and taxonomy on energy efficient resource allocation techniques for cloud computing systems
+    \item Demonstrating Scalability and Efficiency of Pack-Centric Resource Management for Cloud
+        2016 IEEE 9th International Conference on Cloud Computing
+\end{itemize}
 \end{document}
